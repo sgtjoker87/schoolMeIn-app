@@ -1,0 +1,77 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+.smn_navBar {
+	background-color: #FFFFFF;
+	width: 98%;
+	border: 0px solid;
+	margin: 5px auto;
+	border-radius: 4px;
+}
+
+.smn_navBar input {
+	width: 98%;
+}
+
+.smn_container {
+	width: 85%;
+}
+
+.smn_submitBtn {
+	background-color: #F08080;
+	border: 0px;
+	margin: 10px 0;
+	font-weight: bold;
+}
+
+.smn_submitBtn:hover {
+	background-color: #D87373;
+}
+
+.smn_shadow {
+	box-shadow: 0 0 3px 3px #D3D3D3;
+	display: block;
+}
+
+.smn_topBottomMargin {
+	margin: 10px 0;
+}
+
+.smn_carousel {
+	height: 900px;
+}
+
+.smn_carousel-caption {
+  	z-index: 10;
+}
+
+.smn_carousel .item {
+  	height: 900px;
+  	background-color: #777;
+}
+
+.smn_carousel-inner > .item > img {
+	min-width: 100%;
+  	height: 900px;
+}
+
+.smn_navbar-brand {
+	font-size: 24px;
+}
+
+.smn_navbar-right {
+	width: 25%;
+}
+
+.navbar-inverse .smn_navbar-brand:hover {
+	color: black;
+}
