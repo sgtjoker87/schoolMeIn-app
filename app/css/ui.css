@@ -6,7 +6,7 @@ body, html {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .smn_navBar {
@@ -63,6 +63,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .smn_navbar-brand {
 	font-size: 24px;
+	color: #F08080;
 }
 
 .smn_navbar-right {
@@ -70,24 +71,23 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inverse .smn_navbar-brand:hover {
-	color: black;
+	color: #F08080;
 }
 
 .col-wrapper{
-	width:90%;
+	width:85%;
 	margin:0 auto;
 }
 
 .col{
-	margin:10px 0; 
+	margin:15px 0; 
 	float:left; display:inline;
 }
 
 .col-670{
-	width:60%;
+	width:70%;
 }
 
 .col-250{
-	width:40%;
-	 background:#999;
+	width:30%;
 }
