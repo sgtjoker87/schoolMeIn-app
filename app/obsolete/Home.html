@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>School Me In - Find your school portal</title>
+	<!-- INCLUDE REQUIRED THIRD PARTY LIBRARY JAVASCRIPT AND CSS -->
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script src='https://cdn.firebase.com/libs/angularfire/0.7.0/angularfire.min.js'></script>
+	<!-- INCLUDE APPLICATION SPECIFIC CSS AND JAVASCRIPT -->
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/HomeCtrl.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+    <div class='banner'>
+        <div class='container'>
+            <h1>School Me In</h1>
+        </div>
+    </div>
+	<div class="container main-frame" ng-app="App" ng-controller="HomeCtrl" ng-init="init()">
+		<div class="search-box row-fluid form-inline">
+		<label>Filter: </label>
+        <input type="text" ng-model="filterText"/>
+        <label>Tags: </label>
+        <select ng-model="TagsFilter" ng-options="label for label in availableTags">
+        <option value="">All</option>
+        <label>Order by: </label>
+<select ng-model="orderField" ng-options="label for label in orderFields" class="input-medium"></select>
+<select ng-model="orderReverse"class="input-medium">
+    <option value="true">Descending</option>
+    <option value="false">Ascending</option>
+</select>
+        </select>
+        <ul class = "nav navbar-nav navbar-right">
+<li><a href="#question" data-toggle="modal">Submit a Question</a></li>
+</ul>
+<div class = "modal fade" id = "question" role = "dialog" >
+                            <div class = "modal-dialog">
+                                <div class = "modal-content">
+                                    <div class = "modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Submit a Question</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>My question is&hellip;</p>
+                                                <textarea class="form-control" rows="3">
+                                            </textarea>
+                                            <p>and tags are&hellip;</p>
+                                            <div class="input-group input-group-lg">
+                                                <input type="text" class="form-control" placeholder="tags">
+                                            </div>
+
+                                            </div>
+                                        <div class = "modal-footer">
+                                            <a class = "btn btn-default">Submit</a></div>
+                                    </div>
+                                </div>
+                            </div>
+    </div>
+		
+        <div class="results-top"></div>
+        <div class="results-container">
+            <ul class="question-list"></ul>
+            <li ng-repeat="questions in results | filterText | isTags:TagsFilter | orderBy:customOrder:orderReverse">
+    <!-- <div class="row-fluid">
+        <div class="span3">
+            <img src="{{portal.question.images.screen}}" />  -->
+            <!-- <div class="ratings"><strong>Ratings:</strong> <span class="label"><i class="icon-thumbs-up"></i> {{portal.question.ratings.loved}}</span> <span class="label"><i class="icon-thumbs-down"></i> {{portal.question.ratings.hated}}</span> <span class="label label-important" ng-class="{'label-success': portal.question.ratings.percentage >= 50}"><strong>%</strong> {{portal.question.ratings.percentage}}</div>
+        </div>
+        <div class="span6">
+            <h3>{{portal.show.title}}: {{portal.question.title}}</h3>
+            <p>{{portal.question.overview}}</p>
+        </div>
+        <div class="span3">
+            <div class="fulldate pull-right label label-info">{{portal.date}}</div>
+            <ul class="show-info">
+                <li><strong>Broadcast Date:</strong> {{portal.show.air_day}} {{portal.show.air_time}}</li>
+                <li><strong>Portal:</strong> {{portal.show.network}}</li>
+                <li><strong>Views #:</strong> {{portal.question.Views}}</li>
+                <li><strong>Tags:</strong> <span class="label label-inverse Tags" ng-repeat="genre in portal.show.Tags" ng-click="setTagsFilter(Tags)">{{tags}}</span></span></li>
+            </ul>
+        </div>
+    </div>
+</li>
+        </div>
+
+        <div class="results-bottom"></div>
+	</div> -->
+
+    <div class = "navbar navbar-default navbar-fixed-bottom">
+                    <div class = "container">
+                        <p class = "navbar-text pull-right"> Site built by School Me In Inc</p>
+                        </div></div>
+                        
+                        
+</body>
+</html>
