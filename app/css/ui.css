@@ -6,40 +6,37 @@ body, html {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
 }
 
 .smn_navBar {
 	background-color: #FFFFFF;
-	width: 98%;
+	width: 90%;
 	border: 0px solid;
-	margin: 5px auto;
+	margin: 10px auto;
 	border-radius: 4px;
 }
 
 .smn_navBar input {
-	width: 98%;
+	width: 100%;
+	font-weight: lighter;
 }
 
 .smn_container {
-	width: 85%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
 }
 
 .smn_submitBtn {
 	background-color: #F08080;
 	border: 0px;
 	margin: 10px 0;
-	font-weight: bold;
+	font-weight: bolder;
 }
 
 .smn_submitBtn:hover {
 	background-color: #D87373;
-}
-
-.smn_shadow {
-	box-shadow: 0 0 3px 3px #D3D3D3;
-	display: block;
 }
 
 .smn_topBottomMargin {
@@ -61,11 +58,12 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .smn_carousel-inner > .item > img {
 	min-width: 100%;
-  	height: 900px;
+  	height: 500px;
 }
 
 .smn_navbar-brand {
 	font-size: 24px;
+	color: #F08080;
 }
 
 .smn_navbar-right {
@@ -73,5 +71,23 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inverse .smn_navbar-brand:hover {
-	color: black;
+	color: #F08080;
+}
+
+.col-wrapper{
+	width:85%;
+	margin:0 auto;
+}
+
+.col{
+	margin:15px 0; 
+	float:left; display:inline;
+}
+
+.col-670{
+	width:70%;
+}
+
+.col-250{
+	width:30%;
 }
