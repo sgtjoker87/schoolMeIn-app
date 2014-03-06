@@ -1,129 +1,126 @@
 <!doctype html>
-
-<html lang="en" ng-app="App">
+<html lang="en" ng-app="schoolmeinApp">
 <head>
-  <meta charset="utf-8">
-  <title>Google Phone Gallery</title>
-  <title>SchoolMeIn</title>
-	  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
-	  <link rel="stylesheet" type="text/css" href="css/ui.css">
-	  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/controllers.js"></script>
+  	<meta charset="utf-8">
+  	<title>SchoolMeIn</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/ui.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+	<script src="lib/angular/angular.js"></script>
+	<script src="js/controllers.js"></script>
 </head>
-<html ng-app>
-	<body>
-		<!-- NavBar start -->
-	  	<nav ng-controller="NavBarController" class="navbar navbar-inverse navbar-fixed-top smn_navBar" role="navigation">
-		    <div class="container smn_container">
-		        <div class="navbar-header">
-		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		          <a class="navbar-brand smn_navbar-brand" href="#">
-		          	<i class="fa fa-pencil fa-4x"></i>
-		          	SkoolmeIn
-		          </a>
-		        </div>
-		        <div class="navbar-collapse collapse">
-		          <form class="navbar-right smn_navbar-right" role="form">
-		          	<div class="input-group smn_topBottomMargin">
-						<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-						<input class="form-control" type="text" placeholder="Email address">
-					</div>
-					<div class="input-group smn_topBottomMargin">
-						<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-						<input class="form-control" type="password" placeholder="Password">
-					</div>
-
-					<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Login</a>
-		          </form>
-		        </div>
-		    </div>
-	  	</nav>
-	  	<!-- NavBar end -->
-
-    	<!-- Carousel start -->
-	    <div id="myCarousel" ng-controller="CarouselController" class="carousel slide" data-ride="carousel">
-	        <!-- Indicators start -->
-	        <ol class="carousel-indicators">
-			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-			    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-	        </ol>
-	      	<!-- Indicators end -->
-
-	        <div class="carousel-inner smn_carousel-inner">
-		        <div class="item active">
-		            <img data-src="holder.js/500x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="img/school1.jpg">
-		            <div class="container">
-			            <div class="carousel-caption smn_carousel-caption">
-			                <h1>Heading 1</h1>
-			                <p>Description of Heading 1</p>              
-			            </div>
-		            </div>
-		        </div>
-		        <div class="item">
-		            <img data-src="holder.js/500x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="img/school2.jpg">
-		            <div class="container">
-			            <div class="carousel-caption smn_carousel-caption">
-			                <h1>Heading 2</h1>
-			                <p>Description of Heading 2</p>              
-			            </div>
-		            </div>
-		        </div>
-		        <div class="item">
-		            <img data-src="holder.js/500x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="img/school3.jpg">
-		          	<div class="container">
-			            <div class="carousel-caption smn_carousel-caption">
-			                <h1>Heading 3</h1>
-			                <p>Description of Heading 3</p>              
-			            </div>
-		          	</div>
-		        </div>
+<body ng-cloak>
+	<!-- NavBar start 
+  	<nav ng-controller="NavBarController" class="navbar navbar-inverse navbar-fixed-top smn_navBar" role="navigation">
+	    <div class="container smn_container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand smn_navbar-brand" href="#">
+	          	<i class="fa fa-pencil fa-4x"></i>
+	          	SkoolmeIn
+	          </a>
 	        </div>
+	        <div class="navbar-collapse collapse">
+	          <form class="navbar-right smn_navbar-right" role="form">
+	          	<div class="input-group smn_topBottomMargin">
+					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+					<input class="form-control" type="text" placeholder="Email address">
+				</div>
+				<div class="input-group smn_topBottomMargin">
+					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+					<input class="form-control" type="password" placeholder="Password">
+				</div>
 
-	        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon"></span></a>
-	        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon"></span></a>
+				<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Login</a>
+	          </form>
+	        </div>
 	    </div>
-	    <!-- Carousel end -->
+  	</nav>
+  	 NavBar end -->
 
-	    <div class="col-wrapper">
-		    <div class="col col-670">
-		    	<p><i class="fa fa-building-o fa-5x pull-left"></i>
-		    		<h4>
-		    		Be officially informed! We are all about engaging
-		    		the colleges in the process!
-		    		</h4>
-		    	</p>
+	<!-- Carousel start
+    <div id="myCarousel" ng-controller="CarouselController" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+		    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
 
-		    	<br />
-		    	<br />
+        <div class="carousel-inner smn_carousel-inner">
+	        <div class="item active">
+	            <img data-src="holder.js/500x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="img/school1.jpg">
+	            <div class="container">
+		            <div class="carousel-caption smn_carousel-caption">
+		                <h1>Heading 1</h1>
+		                <p>Description of Heading 1</p>              
+		            </div>
+	            </div>
+	        </div>
+	        <div class="item">
+	            <img data-src="holder.js/500x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="img/school2.jpg">
+	            <div class="container">
+		            <div class="carousel-caption smn_carousel-caption">
+		                <h1>Heading 2</h1>
+		                <p>Description of Heading 2</p>              
+		            </div>
+	            </div>
+	        </div>
+	        <div class="item">
+	            <img data-src="holder.js/500x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="img/school3.jpg">
+	          	<div class="container">
+		            <div class="carousel-caption smn_carousel-caption">
+		                <h1>Heading 3</h1>
+		                <p>Description of Heading 3</p>              
+		            </div>
+	          	</div>
+	        </div>
+        </div>
 
-		    	<p><i class="fa fa-users fa-4x pull-left"></i>
-		    		<h4>
-		    		With over 100,000 college students involved in 
-		    		thousands of groups, its never been easier to connect and collaborate! 
-		    		</h4>
-		    	</p>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon"></span></a>
+    </div>
+    Carousel end -->
 
-		    	<br \>
-		    	<br \>
+    <div class="col-wrapper">
+	    <div class="col col-670">
+	    	<p><i class="fa fa-building-o fa-5x pull-left"></i>
+	    		<h4>
+	    		Be officially informed! We are all about engaging
+	    		the colleges in the process!
+	    		</h4>
+	    	</p>
 
-		    	<p><i class="fa fa-hand-o-right fa-4x pull-left"></i>
-		    		<h4>
-		    		Sign up and check out for yourself! 
-		    		</h4>
-		    	</p>
-		    </div>
+	    	<br />
+	    	<br />
 
-		    <div class="col col-250">
-				<form role="form">
+	    	<p><i class="fa fa-users fa-4x pull-left"></i>
+	    		<h4>
+	    		With over 100,000 college students involved in 
+	    		thousands of groups, its never been easier to connect and collaborate! 
+	    		</h4>
+	    	</p>
+
+	    	<br \>
+	    	<br \>
+
+	    	<p><i class="fa fa-hand-o-right fa-4x pull-left"></i>
+	    		<h4>
+	    		Sign up and check out for yourself! 
+	    		</h4>
+	    	</p>
+	    </div>
+
+	    <div ng-controller="LaunchController" class="col col-250">
+			<form name="signupForm">
+				<fieldset>
+					<!--
 					<div class="input-group smn_topBottomMargin">
 						<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
 						<input class="form-control" type="text" placeholder="Full Name">
@@ -133,27 +130,35 @@
 						<span class="input-group-addon"><i class="fa fa-book fa-fw"></i></span>
 						<input class="form-control" type="text" placeholder="College Major">
 					</div>
-
+					-->
 		          	<div class="input-group smn_topBottomMargin">
 						<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-						<input class="form-control" type="text" placeholder="Email address">
+						<input id="newUserEmailAddress" class="form-control" type="email" required ng-model="newuser.emailaddress" placeholder="Email address">
 					</div>
 
 					<div class="input-group smn_topBottomMargin">
 						<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-						<input class="form-control" type="password" placeholder="Password">
+						<input id="newUserPassword" class="form-control" type="password" required ng-model="newuser.password" placeholder="Password">
 					</div>
+				</fieldset>
+				<!--
+				<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Sign Up</a>
+				-->
 
-					<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Sign Up</a>
-		          </form>
-		    </div>
-		</div>
+				<button type="submit" ng-disabled="signupForm.$invalid" ng-click="createNewUser(newuser, signupForm)" class="btn btn-primary">Sign Up</button>
 
-	    <!-- JS loading -->
-	    <script src="lib/jQuery/jquery-2.1.0.js"></script>
-	    <script src="lib/bootstrap/bootstrap.js"></script>
-	    <script src="lib/angular/angular.js"></script>
-	    <script src="js/main.js"></script>
-	</body>
+	          </form>
+	    </div>
+	</div>
+
+    <!-- JS loading -->
+    <script src="/lib/jquery-2.1.0.min.js"></script>
+	<script src="/lib/underscore-min.js"></script>
+	<script src="/lib/bootstrap.min.js"></script>
+	<script src="/lib/angular/angular.js"></script>
+	<script src="/lib/angular/angular-sanitize.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/controllers/LaunchController.js"></script>
+</body>
 
 </html>
