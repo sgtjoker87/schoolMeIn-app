@@ -1,9 +1,23 @@
 'use strict';
 
-var schoolmeinApp = angular.module('schoolmeinApp', ['ngSanitize'], ['firebase']);
+var schoolmeinApp = angular.module('schoolmeinApp', ['ngSanitize']);
 
+/*
 schoolmeinApp.controller('SampleController', ['$scope', '$firebase', '$firebaseSimpleLogin',
     function($scope, $firebase, $firebaseSimpleLogin) {
       var ref = new Firebase("https://schoolmeinApp.firebaseio.com/");
-      $scope.auth = $firebaseSimpleLogin(ref);
+      
+      var auth = new FirebaseSimpleLogin(ref, function(error, user) {
+      	if (error) {
+      		// an error occured while attempting login
+      		console.log(error);
+      	} else if (user) {
+      		// user authenticated with Firebase
+      		console.log('User ID: ' + user.id + ", Provider: " + user.provider);
+      	} else {
+      		// user is logged out
+      	}
+      });
+
     }]);
+*/
