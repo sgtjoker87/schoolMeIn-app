@@ -137,23 +137,20 @@
 						<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
 						<input id="newUserPassword" class="form-control" type="password" required ng-model="newuser.password" placeholder="Password">
 					</div>
+
+					<div class="input-group smn_topBottomMargin">
+						<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+						<input id="newUserVerifyPass" class="form-control" type="password" required ng-model="newuser.verifypass" placeholder="Verify password">
+					</div>
 				</fieldset>
 				<!--
 				<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Sign Up</a>
 				-->
 
-				<button type="submit" ng-disabled="signupForm.$invalid" ng-click="createNewUser(newuser, signupForm)" class="btn btn-primary">Sign Up</button>
+				<button class="btn btn-block btn-primary smn_submitBtn smn_shadow" type="submit" ng-disabled="signupForm.$invalid || (newuser.password != newuser.verifypass)" ng-click="createNewUser(newuser, signupForm)" class="btn btn-primary">Sign Up</button>
 
 	          </form>
 	    </div>
-
-	    <div ng-controller="SampleController" id="login">
-			<span ng-show="auth.user">
-			{{auth.user.name}} | <a href="#" ng-click="auth.$logout()">Logout</a>
-			</span>
-			<a href="#" ng-hide="auth.user" ng-click="auth.$login('facebook')">Login</a>
-	    </div>
-
 	</div>
 
     <!-- JS loading -->
