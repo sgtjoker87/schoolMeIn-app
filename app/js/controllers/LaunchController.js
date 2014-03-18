@@ -1,7 +1,8 @@
 'use strict';
 
 schoolmeinApp.controller('LaunchController',
-	function LaunchController($scope) {
+	function LaunchController($scope, SessionService) {
+		/*
 		var ref = new Firebase("https://schoolmein.firebaseIO.com");
 
 		var auth = new FirebaseSimpleLogin(ref, function(error, user) {
@@ -15,6 +16,9 @@ schoolmeinApp.controller('LaunchController',
 	      		// user is logged out
 	      	}
       	});
+		*/
+
+		var auth = SessionService.getAuth();
 
       	$scope.loginUser = function(user, loginForm) {
       		if (loginForm.$valid) {
@@ -28,7 +32,8 @@ schoolmeinApp.controller('LaunchController',
 		$scope.createNewUser = function(newUser, signupForm) {
 			if (signupForm.$valid) {
 				/* window.alert('new user ' + newUser.emailaddress + ' saved!'); */
-				auth.createUser(newUser.emailaddress, newUser.password, function(error, user) {
+				auth.createUser(newUser.emailaddress, newUser.password,
+					function(error, user) {
 					if (!error) {
 						console.log('User ID: ' + user.id + ', Email: ' + user.email);
 					}
