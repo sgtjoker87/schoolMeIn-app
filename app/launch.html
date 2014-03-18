@@ -2,15 +2,15 @@
 <html lang="en" ng-app="schoolmeinApp">
 <head>
   	<meta charset="utf-8">
-  	<title>SchoolMeIn</title>
+  	<title>Skoolmein</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/ui.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body ng-cloak>
-	<!-- NavBar start 
-  	<nav ng-controller="NavBarController" class="navbar navbar-inverse navbar-fixed-top smn_navBar" role="navigation">
+	<!-- NavBar start -->
+  	<nav class="navbar navbar-inverse navbar-fixed-top smn_navBar" role="navigation">
 	    <div class="container smn_container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,26 +24,29 @@
 	          	SkoolmeIn
 	          </a>
 	        </div>
-	        <div class="navbar-collapse collapse">
-	          <form class="navbar-right smn_navbar-right" role="form">
-	          	<div class="input-group smn_topBottomMargin">
-					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-					<input class="form-control" type="text" placeholder="Email address">
-				</div>
-				<div class="input-group smn_topBottomMargin">
-					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-					<input class="form-control" type="password" placeholder="Password">
-				</div>
+	        <div ng-controller="LaunchController" class="navbar-collapse collapse">
+	        	<form name="loginForm" class="navbar-right smn_navbar-right" role="form">
+					<fieldset>
+						<div class="input-group smn_topBottomMargin">
+							<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+							<input id="userEmailAddress" class="form-control" type="email" required ng-model="user.emailaddress" placeholder="Email address">
+						</div>
 
-				<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Login</a>
-	          </form>
+						<div class="input-group smn_topBottomMargin">
+							<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+							<input id="userPassword" class="form-control" type="password" required ng-model="user.password" placeholder="Password">
+						</div>
+					</fieldset>
+
+					<button class="btn btn-block btn-primary smn_submitBtn smn_shadow" type="submit" ng-disabled="loginForm.$invalid" ng-click="loginUser(user, loginForm)" class="btn btn-primary">Login</button>
+	          	</form>
 	        </div>
 	    </div>
   	</nav>
-  	 NavBar end -->
+  	<!-- NavBar end -->
 
-	<!-- Carousel start
-    <div id="myCarousel" ng-controller="CarouselController" class="carousel slide" data-ride="carousel">
+	<!-- Carousel start -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
 		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
@@ -83,7 +86,7 @@
         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon"></span></a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon"></span></a>
     </div>
-    Carousel end -->
+    <!-- Carousel end -->
 
     <div class="col-wrapper">
 	    <div class="col col-670">
@@ -143,9 +146,6 @@
 						<input id="newUserVerifyPass" class="form-control" type="password" required ng-model="newuser.verifypass" placeholder="Verify password">
 					</div>
 				</fieldset>
-				<!--
-				<a class="btn btn-block btn-primary smn_submitBtn smn_shadow" href="#">Sign Up</a>
-				-->
 
 				<button class="btn btn-block btn-primary smn_submitBtn smn_shadow" type="submit" ng-disabled="signupForm.$invalid || (newuser.password != newuser.verifypass)" ng-click="createNewUser(newuser, signupForm)" class="btn btn-primary">Sign Up</button>
 

@@ -16,6 +16,15 @@ schoolmeinApp.controller('LaunchController',
 	      	}
       	});
 
+      	$scope.loginUser = function(user, loginForm) {
+      		if (loginForm.$valid) {
+      			auth.login('password', {
+      				email: user.emailaddress,
+      				password: user.password
+      			})
+      		}
+      	};
+
 		$scope.createNewUser = function(newUser, signupForm) {
 			if (signupForm.$valid) {
 				/* window.alert('new user ' + newUser.emailaddress + ' saved!'); */
