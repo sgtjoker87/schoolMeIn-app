@@ -1,6 +1,6 @@
 'use strict';
 
-var schoolmeinApp = angular.module('schoolmeinApp', ['ngSanitize']);
+var schoolmeinApp = angular.module('schoolmeinApp', ['firebase']);
 
 /*
 schoolmeinApp.controller('SampleController', ['$scope', '$firebase', '$firebaseSimpleLogin',
